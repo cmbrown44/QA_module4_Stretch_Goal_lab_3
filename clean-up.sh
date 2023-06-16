@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker rm $(sudo docker ps -aq)
+docker rm $(docker ps -aq)
