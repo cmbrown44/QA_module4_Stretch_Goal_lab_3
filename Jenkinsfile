@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('Stage One'){
             steps {
-                sh "sudo apt udate";
-                sh "sudo apt install docker.io"
+                sh "sudo curl https://get.docker.com | sudo bash";
+                sh "sudo usermod -aG docker jenkins";
+                sh "sudo reboot"
             }
     //     }
     //     stage('second stage'){
