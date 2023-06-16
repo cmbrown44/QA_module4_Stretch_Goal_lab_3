@@ -1,8 +1,8 @@
 #!/bin/bash
 
-docker stop $(docker ps -aq)
-docker rm -f $(docker ps -aq)
-docker rm -f $(docker images)
+docker stop $(docker ps -aq) || true
+docker rm -f $(docker ps -aq) || true
+docker rm -f $(docker images) || true
 
 # containers=$(docker ps -aq)
 
