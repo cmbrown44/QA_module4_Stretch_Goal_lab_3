@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Stage One'){
             steps {
-                sh "sudo curl https://get.docker.com | sudo bash";
-                sh "sudo usermod -aG docker jenkins";
-                sh "sudo reboot"
+                sh "sh deploy.sh"
             }
     //     }
     //     stage('second stage'){
